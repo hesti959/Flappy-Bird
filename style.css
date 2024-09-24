@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Fredoka One', Arial, sans-serif; /* Applied new font */
+    background-color: #70c5ce; /* Added background color */
+}
+
+#game {
+    width: 400px;
+    height: 600px;
+    border: 2px solid #000;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background: url('bg.png') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Added box shadow */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #f2f2f2;
+    z-index: 10;
+}
+
+#play-screen, #game-over {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 20;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; /* Added transition for fade-in effect */
+}
+
+#play-screen.show, #game-over.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+#play-screen p, #game-over p {
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+#play-button {
+    font-size: 24px;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    background: linear-gradient(135deg, #ff9966, #ff5e62); /* Gradient background */
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+    transition: background 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+#play-button:hover {
+    background: linear-gradient(135deg, #ff5e62, #ff9966);
+    transform: translateY(-3px); /* Button lift on hover */
+}
+
+#final-score {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#gameCanvas {
+    display: block;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}

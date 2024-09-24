@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> <!-- Added Google Font -->
+</head>
+<body>
+    <div id="game">
+        <div id="score">Score: 0</div>
+        <div id="play-screen">
+            <p>Flappy Bird</p>
+            <button id="play-button">Start</button> <!-- Changed text from 'Play' to 'Start' -->
+        </div>
+        <div id="game-over">
+            <p>Game Over</p>
+            <p id="final-score"></p>
+            <button onclick="restartGame()">Restart</button>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
